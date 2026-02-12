@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sruthi | Portfolio 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="container nav-wrapper">
+            <div class="nav-logo">SRUTHI PORTFOLIO</div>
+            
+            <div class="menu-icon" id="menu-open">☰</div>
+
+            <ul class="nav-links" id="nav-menu">
+                <div class="menu-close" id="menu-close">✕</div>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-toggle">🌙 Mode</button></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <section id="home">
+        <div class="container hero-content">
+            <h1>I'm <span>Sruthi</span></h1>
+            <p>Pre-final year IT student & Frontend Developer.</p>
+            <a href="#projects" class="cta-btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-flex">
+                <div class="about-image">
+                    <img src="https://t3.ftcdn.net/jpg/07/06/10/62/360_F_706106273_azeLKRtE7CHga5JjHNfWAbgr4IkhEuwD.jpg" alt="Sruthi">
+                </div>
+                <div class="about-text">
+                    <p>The Foundation My journey into technology began with a fascination for the "why" behind the digital world. Currently a pre-final year Information Technology student, I have spent my academic career diving into the core logic of systems. While many find subjects like Information and Coding Theory to be purely mathematical, I see them as the blueprint of our digital future. This technical foundation allows me to approach development not just as a coder, but as a problem-solver who understands the architecture beneath the interface.</p>
+                    <p style="margin-top:15px;">The Creative Spark While my degree provided the logic, my passion for Frontend Development provided the medium. I realized early on that even the most powerful backend system is only as good as its user interface. This sparked my transition into a creator of digital experiences. I began mastering HTML5 and CSS3 as tools for storytelling, focusing on how a website can be both functional and beautiful. To me, a great website is like a conversation: it should be clear, engaging, and leave the user feeling heard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div id="cards" class="card-container"></div>
+        </div>
+  
+<body>
+<div id="cards" class="card-container"></div>
+
+<script>
+  const skill = [
+    { id: 1, name: "HTML", image:"https://www.bing.com/th/id/OIP.4dQkxLm-cAndV-9OfVjjQwHaE8?w=224&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2", description:"HTML (HyperText Markup Language) is the standard markup language used to create web pages. It provides the structure and content of a webpage, allowing developers to define elements such as headings, paragraphs, images, links, and more. HTML uses tags to organize and format content, making it essential for building websites" },
+    { id: 2, name: "CSS", image:"https://th.bing.com/th/id/OIP.yUIb5S_kj98Eg5tT-Onx1AHaHa?w=177&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3", description:"CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML. It controls the layout, colors, fonts, and overall visual appearance of web pages. CSS allows developers to separate content from design, making it easier to maintain and update websites." },
+    { id: 3, name: "JavaScript", image:"https://th.bing.com/th/id/OIP.YPYdVAg5ieRspLI6HIpmDQHaIB?w=168&h=182&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" , description:"JavaScript is a programming language that enables interactive web pages. It is an essential part of web applications and is used to create dynamic content, handle user interactions, and manipulate the DOM (Document Object Model). JavaScript runs on the client-side in web browsers and can also be executed on the server-side using Node.js." }
+  ];
+
+  
+  const skillHTML = skill.map(skill => {
+    return `
+      <div class="card">
+        <img src="${skill.image}" alt="${skill.name}"/>
+        <h2>${skill.name}</h2>
+        <p>${skill.description}</p>
+      </div>`
+    
+  }).join(""); 
+
+
+  document.getElementById("cards").innerHTML = skillHTML;
+</script>
+</body>``
+    </section>
+<section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Budget Tracker</h3>
+                        <p>A simple yet effective tool for tracking personal expenses and managing budgets.</p>
+                        <div class="tag-container">
+                            <span class="tag">HTML</span><span class="tag">CSS</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Exam Hall Seating</h3>
+                        <p>A responsive interface for managing exam hall seating arrangements.</p>
+                        <div class="tag-container">
+                            <span class="tag">JavaScript</span><span class="tag">React</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+    <div class="container">
+        <h2>Get In Touch</h2>
+        <div class="contact-wrapper">
+            <div class="contact-details">
+                <h3>Let's Collaborate</h3>
+                <p class="sub-text">I'm currently looking for internships and open-source opportunities.</p>
+                <p><strong>Email:</strong> rsruthi447@gmail.com</p>
+                <p><strong>Location:</strong> India</p>
+                <div class="social-links">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="portfolio-contact-form">
+                    <input type="text" name="from_name" id="form_name" placeholder="Your Name" onclick="">
+                    <span id="name-error" class="error-msg"></span>
+                    
+                    <input type="email" name="user_email" id="form_email" placeholder="Your Email">
+                    <span id="email-error" class="error-msg"></span>
+                    
+                    <textarea name="message" id="form_message" rows="4" placeholder="Your Message"></textarea>
+                    <span id="message-error" class="error-msg"></span>
+                    
+                    <button type="submit" id="submit-btn" class="submit-btn">Send Message</button>
+                </form>
+                <div id="form-response" style="margin-top: 10px; font-weight: bold; text-align: center;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="main.js"></script>
+
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Sruthi. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+
+
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeToggle.textContent = '☀️ Light Mode';
+    }
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+        let theme = 'light';
+        if (body.classList.contains('dark-mode')) {
+            theme = 'dark';
+            themeToggle.textContent = '☀️ Light Mode';
+        } else {
+            themeToggle.textContent = '🌙 Dark Mode';
+        }
+        
+        localStorage.setItem('theme', theme);
+    });
+</script>
+
+<script>
+    const menuOpen = document.getElementById('menu-open');
+    const menuClose = document.getElementById('menu-close');
+    const navMenu = document.getElementById('nav-menu');
+
+
+    menuOpen.addEventListener('click', () => {
+        navMenu.classList.add('active');
+    });
+
+    
+    menuClose.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+
+    
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    });
+</script>
+
+</body>
+</html>
